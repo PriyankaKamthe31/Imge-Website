@@ -12,7 +12,7 @@ pipeline {
 
         stage('Check Files') {
             steps {
-                sh 'ls -la'
+                sh 'ls -l'
             }
         }
 
@@ -22,7 +22,7 @@ pipeline {
             }
         }
 
-        stage('Run Container') {
+        stage('Run Docker Container') {
             steps {
                 sh '''
                 docker stop image-website || true
